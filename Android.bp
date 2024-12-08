@@ -1,0 +1,32 @@
+soong_namespace {
+}
+
+android_app_import {
+	name: "OnePlusCamera",
+	owner: "oneplus",
+	apk: "proprietary/system_ext/priv-app/OnePlusCamera/OnePlusCamera.apk",
+	certificate: "platform",
+        overrides: ["Aperture", "Camera2"],
+	dex_preopt: {
+		enabled: false,
+	},
+        system_ext_specific: true,
+	privileged: true,
+}
+
+android_app_import {
+	name: "OnePlusCameraService",
+	owner: "oneplus",
+	apk: "proprietary/system/priv-app/OnePlusCameraService/OnePlusCameraService.apk",
+	certificate: "platform",
+	privileged: true,
+}
+
+android_app_import {
+	name: "OnePlusGallery",
+	owner: "oneplus",
+	apk: "proprietary/system_ext/priv-app/OnePlusGallery/OnePlusGallery.apk",
+	certificate: "platform",
+        system_ext_specific: true,
+	privileged: true,
+}
